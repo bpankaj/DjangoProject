@@ -35,6 +35,15 @@ STATICFILES_DIRS = (
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'm0qk4e7ea6&x+w0g8uzxfc)wrzog7up&568teod@c8y^+we0a!'
 
+PASSWORD_HASHERS = (
+        'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+'django.contrib.auth.hashers.BCryptPasswordHasher',
+'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
+
+LOGIN_URL = '/rango/login/'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
